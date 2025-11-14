@@ -45,3 +45,15 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 console.log(uniqueArr);
+
+
+
+for (let i = 0; i < arr.length; i++) {
+   
+   if (uniqueArr.indexOf(arr[i])===-1) {
+      uniqueArr.push(arr[i])
+   }
+   
+}
+
+console.log(uniqueArr)

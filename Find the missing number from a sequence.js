@@ -8,3 +8,17 @@ console.log(missing); // Output: 4
 
 
 // arr.length + 1 isliye likha, kyunki agar ek number missing hai, to actual sequence me total numbers ek zyada hone chahiye.
+
+let arr = [1,3 ,4 ,5 ,4 ,10]
+let missing = []
+arr = arr.sort((a,b)=>a-b)
+
+
+for (let i = arr[0]; i < arr[arr.length-1]; i++) {
+
+   if (!arr.includes(i)) {
+      missing.push(i)
+   }
+}
+
+console.log(missing)
