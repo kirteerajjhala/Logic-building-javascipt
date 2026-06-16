@@ -11,16 +11,11 @@
 
 // ek ek word ko reverse krna hai 
 
-let str = "my name is kirteeraj jhala"
-let word = str.split();
-let reverseStr =""
-word.forEach((item)=>{
+let str = "hello my name is kirteeraj jhala";
+let reversed = "";
 
-    for(let i =item.length-1 ; i>=0; i--){
-        reverseStr += item[i];
-    }
+for (let i = str.length - 1; i >= 0; i--) {
+  reversed += str[i];
+}
 
-    reverseStr+=" "
-})
-
-console.log(reverseStr)
+console.log(reversed);

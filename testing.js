@@ -1,12 +1,22 @@
-let arr = [ 1 ,3 ,4 ,1 ,5]
-let uniqueArr= [];
+let arr = [1, 2, 2, 3, 3];
 
-for (let i = 0; i < arr.length; i++) {
-   
-   if (uniqueArr.indexOf(arr[i])===-1) {
-      uniqueArr.push(arr[i])
-   }
-   
+// uniqueArr = arr.filter((item,index)=>{
+//     if (arr.indexOf(item)==index) {
+//         return item
+//     }
+//     return false
+
+// })
+
+let unique = [];
+
+for (let i = 0; i< arr.length; i++) {
+  let isunique = true;
+  for (let j = 0; j < unique.length; j++) {
+    if (unique[j] == arr[i]) isunique = false;
+  }
+
+  if(isunique) unique.push(arr[i]);
 }
 
-console.log(uniqueArr)
+console.log(unique)

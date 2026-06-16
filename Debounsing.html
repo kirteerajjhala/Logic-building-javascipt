@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounsing</title>
+</head>
+<body>
+    <h1>Debounsing</h1>
+    <input type="text" name="" id="inp" placeholder="enter here">
+    <script>
+
+        let inp = document.querySelector("#inp")
+
+        const  CallApi= (e)=>{
+            console.log(e.target.value)
+        }
+
+
+        function Debounsing (func ,time){
+            let timerId;
+
+           return function DebounsApiCall(e){
+             clearTimeout(timerId)
+          timerId=  setTimeout(()=>{
+               
+                  func(e)
+            },time)
+           }
+
+
+        }
+
+
+
+
+const DebounsApiCall = Debounsing(CallApi , 1000)
+
+
+        inp.addEventListener("input",DebounsApiCall)
+    </script>
+</body>
+</html>

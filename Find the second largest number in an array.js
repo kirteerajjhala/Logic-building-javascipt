@@ -15,3 +15,20 @@ for (let i = 0; i < arr.length; i++) {
     
 }
 console.log(arr[1])
+
+
+// method 2
+let arr = [10, 20, 15, 18];
+let largest =0, secondLargest = 0;
+
+for(let num of arr){
+    
+    if(num>largest){
+        secondLargest = largest;
+        largest = num;
+    }else if (num > secondLargest || num !==largest){
+        secondLargest = num
+    }
+}
+
+console.log(largest , " " , secondLargest)
