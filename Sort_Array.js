@@ -6,6 +6,7 @@ console.log(sortAscending(newArr))
 function sortAscending(newArr){
     let arr = [...newArr]
     for(let i = 0 ; i <newArr.length-1; i++){
+        let isSwap = false;
         
         for(let j = 0 ; j < newArr.length - i-1; j++ ){
             
@@ -14,8 +15,15 @@ function sortAscending(newArr){
                 arr[j] = arr[j] + arr[j+1];
                 arr[j+1] = arr[j] - arr[j+1];
                 arr[j] = arr[j] - arr[j+1];
+                isSwap = true
             }
+
+          
         }
+
+          if(isSwap!==true){
+                return arr
+            }
     }
     
     return arr;
