@@ -1,19 +1,22 @@
+let newArr = [1,3,2,9]
+console.log(sortAscending(newArr))
 
-function sortAscending (arr){
- let newArr = [...arr]
-    for(let i = 0 ; i<newArr.length -1 ; i++){
-        for (let j = 0; j < arr.length; j++) {
+
+// bubble sort
+function sortAscending(newArr){
+    let arr = [...newArr]
+    for(let i = 0 ; i <newArr.length-1; i++){
         
-            if (newArr[j]<newArr[j+1]) {
-                let temp = newArr[j];
-                newArr[j] = newArr[j+1]
-                newArr[j+1] = temp
+        for(let j = 0 ; j < newArr.length - i-1; j++ ){
+            
+            if(arr[j]>arr[j+1]){
+                
+                arr[j] = arr[j] + arr[j+1];
+                arr[j+1] = arr[j] - arr[j+1];
+                arr[j] = arr[j] - arr[j+1];
             }
         }
     }
-
-    return newArr
+    
+    return arr;
 }
-
-let newArr = [1,3,2,9]
-console.log(sortAscending(newArr))

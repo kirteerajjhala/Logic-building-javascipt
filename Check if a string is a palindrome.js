@@ -10,8 +10,8 @@ if (str === reversed) {
 }
 
 
-//Without any method (manual check)
-let isPalindrome = true;
+//Without any method (manuīal check)
+let isPalindrome = true;īīl̥
 
 for (let i = 0; i < str.length / 2; i++) {
   if (str[i] !== str[str.length - 1 - i]) {
